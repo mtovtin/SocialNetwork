@@ -1,0 +1,35 @@
+<div class="column">
+<nav class="panel">
+<p class="panel-heading"> Who To Follow</p>
+<%@users=User.all%>
+
+<%@users.each do |user|%>
+<div class="panel-block">
+<article class="media">
+<div class="media-left">
+<figure class="image is-32x32">
+<img src="https://bulma.io/images/placeholders/64x64.png">
+</figure>
+</div>
+<div class="media-content">
+<div class="content">
+<p>
+<strong><%=user.name%></strong>
+<small><%=user.username%></small>
+<%if user_signed_in?%>
+ <% if user.username == current_user.username %>
+       <h5> <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"button is-info" %></h5>
+    <% elsif current_user.followees.include?(user) %>
+        <h5><%= link_to "Unfollow", unfollow_user_path(user.id),method: "POST",class: "button is-success" %></h5>
+    <% else %>
+        <h5><%= link_to "Follow",  follow_user_path(user.id),method: "POST", class: "button is-warning"  %></h5>
+    <% end%>
+  
+    <br>
+    <%end%>
+</p>
+</div>
+</div>
+</article>
+</div>
+<%end%>
