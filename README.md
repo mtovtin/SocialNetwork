@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Twitter-like website
+--------------------
+UA: Твітероподібна соціальна мережа
 
-Things you may want to cover:
+-        Авторизація (сессія Login/logout)
+-        Стіна юзера
+-        Можливість Follow/Unfollow (з відображенням повідомлень з стіни юзера за яким слідкуєте у вашому потоці новин)
+-        Можливість обмінюватись мікроповідомленнями.
+EN: Twitter-like social network
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Authorization (Login / logout session)
+- User wall
+- Ability to Follow / Unfollow (displaying messages from the wall of the user you follow in your news feed)
+- Ability to exchange micro-messages.
